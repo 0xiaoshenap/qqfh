@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)https://4m.cn/ -->
+<html lang="zh" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">       
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">  
+    <meta name="description" content="HTTPS短网址服务(qqfh.ml)专业的网址缩短服务,具有稳定、快速、安全的特点,支持批量缩短、批量短网址还原、数据报表、开放API接口等服务">
+    <meta name="keywords" content="qqfh短网址,短网址API接口,匿名短网址,批量生成短链接,带统计的免费短网址">
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+	<meta property="og:title" content="短网址,短网址API接口,批量生成短链接,带统计的免费短网址 - 4M短网址">
+	<meta property="og:description" content="HTTPS短网址服务(4m.cn)专业的网址缩短服务,具有稳定、快速、安全的特点,支持批量缩短、批量短网址还原、数据报表、开放API接口等服务">
+	<meta property="og:image" content="">
+    <title>短网址,永久免费的抠扣防荭系统</title> 
+    <script type="text/javascript" src="./datepicker.min.js"></script>
+	<link rel="stylesheet" type="./datepicker.min.css">
+	    <script src="./jquery.min.js"></script>
+
+ <style>
+     *{
+        margin: 0;
+        padding: 0;
+    }
+
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
+    
+    html,body{
+              width: 100%;
+              height: 100%;
+              background: url(https://api.ixiaowai.cn/api/api.php) no-repeat 50%;
+        background-size: cover;
+          }
+ 
+    .header{
+        width: 100%;
+        background: #51e467;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .header .right{
+        padding-right: 30px;
+    }
+    .header .left{
+        padding-left: 30px;
+    }
+    
+    
+    
+    .main{
+        /*width: 100%;*/
+        height: 100%;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 100px;
+        color: #fff;
+        font-size: 26px;
+        
+    }
+    
+    
+    .footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: #262626;
+        height: 30px;
+        width: 100%;
+    }
+    
+    .input_div{
+        width: 100%;
+    margin-right: 32px;
+    margin-top: 60px;
+    }
+    
+    
+    
+    .input-area {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 auto;
+     padding-left: 5px; 
+    border-radius: 1px;
+    background-color: hsla(228, 2%, 32%, 0.5);
+    color: #fff;
+    border-bottom: 1px solid #979797;
+}
+
+.butt{
+ background: #1890ff;
+    margin: 30px auto;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    width: 160px;   
+}
+    
+ </style>
+     
+ </head>
+ 
+ <body style="">
+  <div class="header">
+      <div class="left" style="font-size: 20px;"><span><a href="">韵速防红</a></span></div>
+  </div>
+<center>  
+  <div class="main">
+      <div><span>链接缩短 | 分发</span></div>
+      <div style="padding: 15px 0;"><span>数据分析 | 二维码推广</span></div>
+      <div style="
+    font-size: 14px;
+    color: #bfbfc2;
+"><span>过滤假量，实时统计，QQ防封</span></div>
+      <div class="input_div"><input id="input_url" type="text" placeholder="请把网址粘贴在此处" class="input-area"></br></br><input style="width:50%" id="input_name" type="text" placeholder="请把网址粘贴在此处" class="input-area"></div>
+      <div class="butt">一键生成, 快速分享</div>
+  </div>
+</center>
+  
+  <script>
+           
+           
+              $(".butt").click(function(){            
+                  if($(".butt").html() == "复制"){
+                      
+                        var copyText = $("#input_url");//获取对象
+                        copyText.select();//选择
+                        document.execCommand("Copy");//执行复制
+                 　　   alert("复制成功！");
+                 　　   
+                 　　 $("#input_url").val("");
+                    $("#input_url").html("");
+                    $(".butt").html("一键生成, 快速分享");
+                  }else{
+                      var url = $("#input_url").val();
+                        var http = RegExp(/http:/);
+                        var https = RegExp(/https:/);
+                        if(url.match(http) || url.match(https)){
+							var btnVal=document.getElementById("butt");
+							var u=url;
+							u = u.replace('://','%3A%7C%7C');
+							u = u.replace(/\./g,"%24");
+							u = u.replace(/\&/g,"%E5%92%8C");
+							u = u.replace(/\?/g,"%EF%BC%9F");
+							u = u.replace(/\=/g,"%E7%AD%89");
+							input_url.value="https://qqnored.ml?t="+$("#input_name").val()+"&u="+u;
+							var copyText = $("#input_url");//获取对象
+							copyText.select();//选择
+							document.execCommand("Copy");//执行复制
+					 　　   var xxk = confirm("已将防红链接复制到您的剪贴板!如需短网址请点击确定自行生成短网址进行宣传.");
+							if (xxk==true){
+								window.location.href="http://r6n.cn/";
+                 			}
+							input_url.value="";
+                        }else{
+                            alert("url需要http或者https开头")
+                        }
+                  }
+              })
+</script>
+  
+ 
+<div style="position: static; display: none; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;"><div id="trans-tooltip"><div id="tip-left-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-left-top.png&quot;);"></div><div id="tip-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-top.png&quot;) repeat-x;"></div><div id="tip-right-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-right-top.png&quot;);"></div><div id="tip-right" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-right.png&quot;) repeat-y;"></div><div id="tip-right-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-right-bottom.png&quot;);"></div><div id="tip-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-bottom.png&quot;) repeat-x;"></div><div id="tip-left-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-left-bottom.png&quot;);"></div><div id="tip-left" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-left.png&quot;);"></div><div id="trans-content"></div></div><div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-arrow-bottom.png&quot;);"></div><div id="tip-arrow-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-arrow-top.png&quot;);"></div></div></body></html>
